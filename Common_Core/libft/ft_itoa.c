@@ -10,10 +10,70 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <string.h>
 #include "libft.h"
 
-char *ft_itoa(int n)
+int	count(long n)
 {
-	
+	long	i;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		n = -n;
+	while (n != 0)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
+}
+
+void	reverse(char *str, long size)
+{
+	long	aux;
+	long	half;
+	long	i;
+
+	i = 0;
+	half = size / 2;
+	while (i < half)
+	{
+		aux = str[size - i - 1];
+		str[size - i - 1] = str[i];
+		str[i] = aux;
+		i++;
+	}
+	str[size] = '\0';
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	i;
+	long	size;
+	long	negative;
+	long	num;
+
+	num = n;
+	size = count(num);
+	negative = 0;
+	if (num < 0)
+	{
+		negative = 1;
+		num = -num;
+	}
+	str = (char *)malloc(sizeof(char) * (size + negative + 1));
+	i = 0;
+	while (i < size)
+	{
+		str[i++] = (num % 10) + '0';
+		num /= 10;
+	}
+	if (negative)
+		str[i++] = '-';
+	reverse(str, (size + negative));
+	return (str);
 }
