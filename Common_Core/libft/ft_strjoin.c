@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:33:48 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/26 15:01:52 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:07 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

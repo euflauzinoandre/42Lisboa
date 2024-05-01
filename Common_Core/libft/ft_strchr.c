@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:16:14 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/14 19:24:20 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:04:56 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *str, int c)

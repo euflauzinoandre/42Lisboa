@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 00:37:42 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/28 00:38:52 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:02:59 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 int	count(long n)

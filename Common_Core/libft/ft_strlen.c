@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:34:09 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/14 17:43:08 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:21 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *str)

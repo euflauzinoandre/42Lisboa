@@ -3,32 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:34:40 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/16 16:00:18 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:02:37 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void		*allocated_memory;
 	size_t		total_size;
-	size_t		i;
 
-	total_size = nitems * size;
-	allocated_memory = malloc(total_size);
 	if (nitems == 0 || size == 0)
-		return (NULL);
-	i = 0;
-	while (i < total_size)
 	{
-		((char *)allocated_memory)[i] = 0;
-		i++;
+		allocated_memory = malloc(0);
+		if (!allocated_memory)
+			return (NULL);
+		return (allocated_memory);
 	}
+	total_size = nitems * size;
+	if (nitems != total_size / size)
+		return (NULL);
+	allocated_memory = malloc(total_size);
+	if (!allocated_memory)
+		return (NULL);
+	ft_memset(allocated_memory, 0, total_size);
 	return (allocated_memory);
 }

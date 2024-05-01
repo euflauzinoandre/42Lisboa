@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:54:23 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/14 18:07:44 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:46 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_toupper(int c)

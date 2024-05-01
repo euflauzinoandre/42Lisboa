@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 21:34:34 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/15 12:36:56 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:13 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

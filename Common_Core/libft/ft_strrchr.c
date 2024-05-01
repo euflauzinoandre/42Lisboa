@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 15:24:32 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/15 20:48:44 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:35 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)

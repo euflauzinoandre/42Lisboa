@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:17:45 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/14 18:07:11 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:02:40 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalnum(int c)

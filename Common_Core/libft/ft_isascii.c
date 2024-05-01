@@ -6,11 +6,10 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:50 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/04/14 18:07:22 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:02:49 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isascii(int c)
