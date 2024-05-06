@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	count(long n)
+static int	count(long n)
 {
 	long	i;
 
@@ -29,7 +29,7 @@ int	count(long n)
 	return (i);
 }
 
-void	reverse(char *str, long size)
+static void	reverse(char *str, long size)
 {
 	long	aux;
 	long	half;

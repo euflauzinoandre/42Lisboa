@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	to_char(long n, int fd)
+static void	to_char(long n, int fd)
 {
 	if (n < 0)
 	{

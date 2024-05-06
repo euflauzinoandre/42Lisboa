@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -27,7 +27,7 @@ int	count_words(const char *s, char c)
 			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
-		else 
+		else
 		{
 			while (s[i] == c)
 				i++;
