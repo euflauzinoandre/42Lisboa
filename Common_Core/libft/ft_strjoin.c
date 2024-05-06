@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:33:48 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:05:07 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 18:58:35 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*newstr;
 
 	total_size = ft_strlen(s1) + ft_strlen(s2);
-	newstr = (char *)malloc(sizeof(char) * (total_size + 1));
+	newstr = malloc(sizeof(char) * (total_size + 1));
 	if (!newstr)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:12:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:04:38 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:34:14 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 	{
-		write(fd, s, 1);
+		ft_putchar_fd(*s, fd);
 		s++;
 	}
-	write(fd, "\n", 1);
+	ft_putchar_fd('\n', fd);
 }

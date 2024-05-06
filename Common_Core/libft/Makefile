@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 15:28:18 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/04/28 21:00:18 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/05/05 23:03:47 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ bonus: $(OBONUS)
 	@echo "$(WHITE)::Compiled bonus files	[OK]$(NC)"
 	@ar -rcs $(NAME) $(OBONUS)
 	@echo "$(WHITE)::Builded bonus libft.a	[OK]$(NC)"
-	
+	@echo "\n$(GREEN)[Bonus compiled successfully!]$(NC)\n"	
 
 # Rule to compile individual .c files to .o files
 $(DIR)/%.o: $(DIR)/%.c $(DIR)/%.h

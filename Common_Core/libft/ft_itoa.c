@@ -6,13 +6,13 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 00:37:42 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:02:59 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 21:04:11 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count(long n)
+static int	count_numbers(long n)
 {
 	long	i;
 
@@ -52,26 +52,26 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	i;
 	long	size;
-	long	negative;
 	long	num;
 
 	num = n;
-	size = count(num);
-	negative = 0;
+	size = count_numbers(num);
 	if (num < 0)
 	{
-		negative = 1;
+		size += 1;
 		num = -num;
 	}
-	str = (char *)malloc(sizeof(char) * (size + negative + 1));
+	str = malloc(sizeof(char) * (size + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (i < size)
 	{
 		str[i++] = (num % 10) + '0';
 		num /= 10;
 	}
-	if (negative)
-		str[i++] = '-';
-	reverse(str, (size + negative));
+	if (n < 0)
+		str[size - 1] = '-';
+	reverse(str, size);
 	return (str);
 }

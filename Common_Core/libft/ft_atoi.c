@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 03:42:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:02:30 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:10:16 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_atoi(const char *str)
 	int	num;
 	int	signal;
 
+	if (!str)
+		return (0);
 	i = 0;
 	num = 0;
 	signal = 1;

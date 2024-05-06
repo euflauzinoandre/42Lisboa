@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:48:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:02:34 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:10:18 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_bzero(void *str, size_t n)
 {
+	if (!str || !n)
+		return ;
 	ft_memset(str, '\0', n);
 }

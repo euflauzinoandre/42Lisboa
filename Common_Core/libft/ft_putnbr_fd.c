@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:25:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:04:42 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:42:29 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	to_char(long n, int fd)
 {
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		ft_putchar_fd('-', fd);
 		n = -n;
 	}
 	if (n >= 10)

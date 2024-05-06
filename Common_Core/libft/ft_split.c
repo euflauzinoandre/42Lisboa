@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:01:15 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:04:52 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:52:21 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	count_words(const char *s, char c)
 			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
-		else
+		else 
 		{
 			while (s[i] == c)
 				i++;
@@ -36,21 +36,27 @@ static int	count_words(const char *s, char c)
 	return (count);
 }
 
+static char	**erase_words(char **word_vector, int position)
+{
+	while (position > 0)
+		free(word_vector[--position]);
+	free(word_vector);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**word_vector;
-	int		count;
 	int		i;
 	int		j;
 	int		word;
 
-	count = count_words(s, c);
-	word_vector = malloc(sizeof(char *) * (count + 1));
+	word_vector = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!word_vector)
 		return (NULL);
 	i = 0;
 	word = 0;
-	while (word < count)
+	while (word < count_words(s, c))
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
@@ -58,6 +64,8 @@ char	**ft_split(char const *s, char c)
 		while (s[j] != c && s[j] != '\0')
 			j++;
 		word_vector[word++] = ft_substr(s, i, (j - i));
+		if (!word_vector)
+			return (erase_words(word_vector, word));
 		i = j;
 	}
 	word_vector[word] = NULL;

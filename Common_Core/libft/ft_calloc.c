@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:34:40 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/01 14:02:37 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:11:31 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_calloc(size_t nitems, size_t size)
 	if (!allocated_memory)
 		return (NULL);
 	ft_bzero(allocated_memory, total_size);
-	return ;
+	return (allocated_memory);
 }
