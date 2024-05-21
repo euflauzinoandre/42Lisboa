@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:25:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/20 01:52:31 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:10:09 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ static void	to_char(long n, int fd)
 	ft_putchar_fd((n % 10 + '0'), fd);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(long n, int fd)
 {
-	long	num;
-
-	num = n;
-	to_char(num, fd);
+	to_char(n, fd);
 }

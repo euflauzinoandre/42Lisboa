@@ -6,13 +6,13 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 01:28:19 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/21 03:40:08 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:30:43 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	count_numbers(long n)
+int	counter(long n)
 {
 	long	i;
 
@@ -35,11 +35,11 @@ static int	count_numbers(long n)
 int	print_d(int n, int fd)
 {
 	ft_putnbr_fd(n, fd);
-	return (count_numbers((long)n));
+	return (counter((long)n));
 }
 
-int	print_u(unsigned int n, int fd)
+int	print_u(long n, int fd)
 {
-	ft_putnbr_fd((unsigned int)n, fd);
-	return (count_numbers((unsigned int)n));
+	ft_putnbr_fd(n, fd);
+	return (counter(n));
 }
