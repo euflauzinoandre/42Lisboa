@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:01:15 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/06 20:52:21 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/21 03:41:06 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	count_words(const char *s, char c)
 			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
-		else 
+		else
 		{
 			while (s[i] == c)
 				i++;

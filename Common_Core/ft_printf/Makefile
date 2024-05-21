@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+         #
+#    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 17:48:48 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/05/12 17:48:51 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/05/21 01:38:19 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ DIR = .
 LIBFT = libft
 
 # C files to be compiled into objects
-CFILES = ft_printf.c
+CFILES = ft_printf.c output_data.c print_integers.c
 
 # Rule to generate object files from file list
 OFILES = $(CFILES:%.c=$(DIR)/%.o)
@@ -54,13 +54,13 @@ $(DIR)/%.o: $(DIR)/%.c $(DIR)/%.h
 
 # Rule to remove all object files
 clean:	
-	@$(RM) $(OFILES)
-	@$(MAKE) clean -C $(LIBFT)
+	$(RM) $(OFILES)
+	$(MAKE) clean -C $(LIBFT)
 
 # Rule to call "Clean" rule and remove the library .a
 fclean: clean
-	@$(RM) -f $(NAME) *.a
-	@$(RM) -f $(LIBFT)/libft.a
+	$(RM) $(NAME)
+	$(RM) $(LIBFT)/libft.a
 
 # Rule to remove all created files and rebuild the library
 re: fclean all

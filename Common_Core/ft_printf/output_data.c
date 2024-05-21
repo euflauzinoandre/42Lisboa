@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   output_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 17:49:05 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/21 01:44:12 by aeuflauz         ###   ########.fr       */
+/*   Created: 2024/05/20 11:06:06 by aeuflauz          #+#    #+#             */
+/*   Updated: 2024/05/21 01:47:03 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+int	output_data(const char *params, int i, int num_args, va_list args)
+{
+	int	fd;
 
-int	ft_printf(const char *arguments, ...);
-int	output_data(const char *params, int i, int num_args, va_list args);
-int	print_d(int n, int fd);
-
-#endif // FT_PRINTF_H
+	fd = 1;
+	if (params[i] == 'c')
+		num_args += ft_putchar_fd(va_arg(args, int), fd);
+	if (params[i] == 's')
+		num_args += ft_putstr_fd(va_arg(args, char *), fd);
+	if (params[i] == 'd')
+		num_args += print_d(va_arg(args, int), fd);
+	return (num_args);
+}
