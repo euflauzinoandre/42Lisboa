@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aeuflauz <aeuflauz@student.42lisboa.c      +#+  +:+       +#+         #
+#    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 15:28:18 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/05/05 23:03:47 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/05/27 02:44:55 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 	ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-	ft_strmapi.c ft_striteri.c ft_itoa.c ft_strtrim.c ft_split.c
+	ft_strmapi.c ft_striteri.c ft_itoa.c ft_strtrim.c ft_split.c \
+	ft_putnbr_unsigned_fd.c
 
 # C files bonus part
 CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \

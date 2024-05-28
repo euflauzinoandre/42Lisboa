@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:48:13 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/20 06:23:29 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:38:28 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	int	count;
 
-	i = 0;
+	count = 0;
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
-		i++;
+		count++;
 	}
-	return (i);
+	return (count);
 }

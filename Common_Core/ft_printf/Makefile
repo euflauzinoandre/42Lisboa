@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 17:48:48 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/05/21 16:01:50 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/05/28 11:02:38 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ DIR = .
 LIBFT = libft
 
 # C files to be compiled into objects
-CFILES = ft_printf.c output_data.c print_integers.c
+CFILES = ft_printf.c output_data.c print_integers.c toolbox.c
 
 # Rule to generate object files from file list
 OFILES = $(CFILES:%.c=$(DIR)/%.o)

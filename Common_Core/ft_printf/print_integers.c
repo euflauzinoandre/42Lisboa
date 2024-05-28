@@ -6,40 +6,36 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 01:28:19 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/21 16:30:43 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:00:49 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	counter(long n)
-{
-	long	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		n = -n;
-		i++;
-	}
-	while (n != 0)
-	{
-		i++;
-		n /= 10;
-	}
-	return (i);
-}
-
 int	print_d(int n, int fd)
 {
-	ft_putnbr_fd(n, fd);
-	return (counter((long)n));
+	ft_putnbr_fd((long)n, fd);
+	return (count_numbers((long)n));
 }
 
-int	print_u(long n, int fd)
+int	print_i(int n, int fd)
 {
-	ft_putnbr_fd(n, fd);
-	return (counter(n));
+	ft_putnbr_fd((long)n, fd);
+	return (count_numbers((long)n));
+}
+
+int	print_u(unsigned long n, int fd)
+{
+	ft_putnbr_unsigned_fd(n, fd);
+	return (count_numbers((long)n));
+}
+
+int	print_x(unsigned long n, int fd)
+{
+	return(decimal_to_hexadecimal(n, 'x', fd));
+}
+
+int	print_upperx(unsigned long n, int fd)
+{
+	return (decimal_to_hexadecimal(n, 'X', fd));
 }

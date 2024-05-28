@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 00:37:42 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/06 21:04:11 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/05/26 23:48:28 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	reverse(char *str, long size)
 	str[size] = '\0';
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	char	*str;
 	long	i;
