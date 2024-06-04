@@ -6,25 +6,30 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:25:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/27 00:32:19 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:37:18 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	to_char(long n, int fd)
+static int	to_char(long n, int *count, int fd)
 {
 	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
+		*count += ft_putchar_fd('-', fd);
 		n = -n;
 	}
 	if (n >= 10)
-		to_char((n / 10), fd);
-	ft_putchar_fd((n % 10 + '0'), fd);
+		to_char((n / 10), count, fd);
+	*count += ft_putchar_fd((n % 10 + '0'), fd);
+	return (*count);
 }
 
-void	ft_putnbr_fd(long n, int fd)
+int	ft_putnbr_fd(long n, int fd)
 {
-	to_char(n, fd);
+	int	count;
+
+	count = 0;
+	count = to_char(n, &count, fd);
+	return (count);
 }

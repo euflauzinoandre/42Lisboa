@@ -6,30 +6,29 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 11:06:06 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/28 16:33:28 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/06/04 10:17:46 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	output_data(const char *params, int i, int num_args, va_list args)
+int	output_data(const char *str, int num_args, va_list args, int fd)
 {
-	int	fd;
-
-	fd = 1;
-	if (params[i] == 'c')
+	if (*str == 'c')
 		num_args += ft_putchar_fd(va_arg(args, int), fd);
-	if (params[i] == 's')
+	if (*str == 's')
 		num_args += ft_putstr_fd(va_arg(args, char *), fd);
-	if (params[i] == 'd')
-		num_args += print_d(va_arg(args, int), fd);
-	if (params[i] == 'i')
-		num_args += print_i(va_arg(args, int), fd);
-	if (params[i] == 'u')
-		num_args += print_u(va_arg(args, unsigned long), fd);
-	if (params[i] == 'x')
-		num_args += print_x(va_arg(args, unsigned long), fd);
-	if (params[i] == 'X')
-		num_args += print_upperx(va_arg(args, unsigned long), fd);
+	if (*str == 'p')
+		num_args += print_p(va_arg(args, void *), fd);
+	if (*str == 'd' || *str == 'i')
+		num_args += print_di(va_arg(args, int), fd);
+	if (*str == 'u')
+		num_args += print_u(va_arg(args, unsigned int), fd);
+	if (*str == 'x')
+		num_args += print_x(va_arg(args, unsigned int), fd);
+	if (*str == 'X')
+		num_args += print_upperx(va_arg(args, unsigned int), fd);
+	if (*str == '%')
+		num_args += ft_putchar_fd('%', fd);
 	return (num_args);
 }

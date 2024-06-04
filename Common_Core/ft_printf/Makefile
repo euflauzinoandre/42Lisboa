@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 17:48:48 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/05/28 11:02:38 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/06/04 10:33:15 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CC =  @cc
 # Make command
 MAKE = @make
 
-# Linux commands
+# Shell commands
 CP = @cp
 MV = @mv
 AR = @ar -rcs
@@ -33,7 +33,7 @@ DIR = .
 LIBFT = libft
 
 # C files to be compiled into objects
-CFILES = ft_printf.c output_data.c print_integers.c toolbox.c
+CFILES = ft_printf.c output_data.c print_integers.c
 
 # Rule to generate object files from file list
 OFILES = $(CFILES:%.c=$(DIR)/%.o)
@@ -60,7 +60,7 @@ clean:
 # Rule to call "Clean" rule and remove the library .a
 fclean: clean
 	$(RM) $(NAME)
-	$(RM) $(LIBFT)/libft.a
+	$(MAKE) fclean -C $(LIBFT)
 
 # Rule to remove all created files and rebuild the library
 re: fclean all

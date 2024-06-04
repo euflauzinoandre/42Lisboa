@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 15:28:18 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/05/27 02:44:55 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/06/03 19:11:37 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_strmapi.c ft_striteri.c ft_itoa.c ft_strtrim.c ft_split.c \
-	ft_putnbr_unsigned_fd.c
+	ft_putnbr_unsigned_fd.c ft_putnbr_base.c
 
 # C files bonus part
 CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \

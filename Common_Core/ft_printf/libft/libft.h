@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:59:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/05/28 13:45:09 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/06/04 10:12:31 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(long n, int fd);
-void	ft_putnbr_unsigned_fd(unsigned long n, int fd);
+int		ft_putnbr_base(unsigned long n, char entry, int fd);
+int		ft_putnbr_fd(long n, int fd);
+int		ft_putnbr_unsigned_fd(unsigned int n, int fd);
 
 /*BONUS PART*/
 typedef struct s_list
