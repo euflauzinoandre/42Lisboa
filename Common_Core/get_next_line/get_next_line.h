@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 17:25:54 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/07/16 17:25:55 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/07/16 18:32:45 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
+# include <stdio.h>
+# include <unistd.h>
+
+char *get_next_line(int fd);
 
 #endif
