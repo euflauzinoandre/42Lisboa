@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 17:25:54 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/07/16 18:32:45 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/07/30 12:02:27 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,14 @@
 
 # include <stdio.h>
 # include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <fcntl.h>
 
-char *get_next_line(int fd);
+char	*get_next_line(int fd);
+size_t	size_line(int fd, char *buffer);
+void	append(char *dest, const char *src);
+char	*create_line(int fd, char *buffer);
+void	clear(char *string);
 
 #endif
