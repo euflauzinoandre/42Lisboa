@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:26:01 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/08/20 16:35:08 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/08/27 17:02:07 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*remainder;
+	static char	*rest;
 	char		*get_line;
-	char		buffer[BUFFER_SIZE + 1];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!remainder)
-		remainder = read_file(fd, buffer);
-	if (remainder)
-	{
-		get_line = ft_get_line (remainder);
-		remainder = ft_get_rest (remainder);
-	}
+	if (!find_newline(rest))
+		rest = read_file(fd, rest);
+	if (!rest)
+		return (NULL);
+	get_line = ft_get_line(rest);
+	rest = ft_get_rest(rest);
 	return (get_line);
 }
