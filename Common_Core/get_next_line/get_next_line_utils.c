@@ -66,33 +66,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (newstr);
 }
 
-char	*read_file(int fd, char *str)
-{
-	char	*buffer;
-	char	*create_line;
-	char	*temp;
-	int		bytes_read;
-
-	if (!str)
-		create_line = NULL;
-	else
-		create_line = str;
-	buffer = malloc (sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
-		return (NULL);
-	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
-	{
-		buffer[bytes_read] = '\0';
-		temp = ft_strjoin(create_line, buffer);
-		free(create_line);
-		create_line = temp;
-		if (find_newline(create_line))
-			break ;
-	}
-	free(buffer);
-	return (create_line);
-}
-
 char	*ft_get_line(char *str)
 {
 	char	*get_line;
