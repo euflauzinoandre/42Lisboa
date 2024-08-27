@@ -14,16 +14,33 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*rest;
-	char		*get_line;
+	static char	*next;
+	char		*buffer;
+	char		*line;
+	char		*temp;
+	int		bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!find_newline(rest))
-		rest = read_file(fd, rest);
-	if (!rest)
+	if (!find_newline(next))
+	{
+		buffer = malloc (sizeof(char) * (BUFFER_SIZE + 1));
+		if (!buffer)
+			return (NULL);
+		while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
+		{
+			buffer[bytes_read] = '\0';
+			temp = ft_strjoin(next, buffer);
+			free(next);
+			next = temp;
+			if (find_newline(next))
+				break ;
+		}
+	free(buffer);
+	}
+	if (!next)
 		return (NULL);
-	get_line = ft_get_line(rest);
-	rest = ft_get_rest(rest);
-	return (get_line);
+	line = ft_get_line(next);
+	next = ft_get_rest(next);
+	return (line);
 }
