@@ -15,31 +15,16 @@
 char	*get_next_line(int fd)
 {
 	static char	*next;
-	char		*buffer;
 	char		*line;
-	char		*temp;
-	int		bytes_read;
+	int			bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	bytes_read = 1;
 	if (!find_newline(next))
-	{
-		buffer = malloc (sizeof(char) * (BUFFER_SIZE + 1));
-		if (!buffer)
-			return (NULL);
-		while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
-		{
-			buffer[bytes_read] = '\0';
-			temp = ft_strjoin(next, buffer);
-			free(next);
-			next = temp;
-			if (find_newline(next))
-				break ;
-		}
-	free(buffer);
-	}
-	if (!next)
-		return (NULL);
+		next = read_file(fd, next, &bytes_read);
+	if (bytes_read == 0 && (!next || !*next))
+		return (free(next), NULL);
 	line = ft_get_line(next);
 	next = ft_get_rest(next);
 	return (line);
