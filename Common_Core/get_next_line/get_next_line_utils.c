@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:27:13 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/08/27 16:59:15 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/09/10 16:05:04 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*find_newline(char *str)
 {
 	int	i;
 
-	i = 0;
 	if (!str)
 		return (NULL);
+	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '\n')
@@ -28,42 +28,55 @@ char	*find_newline(char *str)
 	return (NULL);
 }
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
-	size_t	i;
-	size_t	j;
 	size_t	len_s1;
 	size_t	len_s2;
 
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
+	len_s1 = 0;
+	len_s2 = 0;
+	while (s1 && s1[len_s1] != '\0')
+		len_s1++;
+	while (s2 && s2[len_s2] != '\0')
+		len_s2++;
 	newstr = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
-	if (!newstr && !s1 && !s2)
+	if (!newstr)
 		return (NULL);
-	i = 0;
-	while (s1 && s1[i] != '\0')
+	len_s1 = 0;
+	while (s1 && s1[len_s1] != '\0')
 	{
-		newstr[i] = s1[i];
-		i++;
+		newstr[len_s1] = s1[len_s1];
+		len_s1++;
 	}
-	j = 0;
-	while (s2 && s2[j] != '\0')
-		newstr[i++] = s2[j++];
-	newstr[i] = '\0';
+	len_s2 = 0;
+	while (s2 && s2[len_s2] != '\0')
+		newstr[len_s1++] = s2[len_s2++];
+	newstr[len_s1] = '\0';
 	return (newstr);
+}
+
+char	*read_file(int fd, char *next, int *bytes_read)
+{
+	char	*temp;
+	char	*buffer;
+
+	buffer = malloc (sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buffer)
+		return (NULL);
+	while (!find_newline(next))
+	{
+		*bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (*bytes_read < 0)
+			return (free(buffer), free(next), NULL);
+		if (*bytes_read == 0)
+			break ;
+		buffer[*bytes_read] = '\0';
+		temp = ft_strjoin(next, buffer);
+		free(next);
+		next = temp;
+	}
+	return (free(buffer), next);
 }
 
 char	*ft_get_line(char *str)
@@ -94,25 +107,26 @@ char	*ft_get_line(char *str)
 char	*ft_get_rest(char *str)
 {
 	char	*rest;
+	size_t	len_str;
 	int		i;
-	int		j;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
-	if (!str[i])
-	{
-		free(str);
-		return (NULL);
-	}
-	i++;
-	rest = malloc(sizeof(char) * (ft_strlen(str) - i + 1));
+	if (!str[i++])
+		return (free(str), NULL);
+	len_str = 0;
+	while (str && str[len_str] != '\0')
+		len_str++;
+	rest = malloc(sizeof(char) * ((len_str - i) + 1));
 	if (!rest)
 		return (NULL);
-	j = 0;
+	len_str = 0;
 	while (str[i] != '\0')
-		rest[j++] = str[i++];
-	rest[j] = '\0';
-	free(str);
-	return (rest);
+		rest[len_str++] = str[i++];
+	rest[len_str] = '\0';
+	return (free(str), rest);
 }
+
