@@ -20,12 +20,11 @@
 # include <fcntl.h> 
 
 char	*get_next_line(int fd);
-char	*read_file(int fd, char *str);
 char	*ft_get_line(char *str);
 char	*ft_get_rest(char *str);
 char	*find_newline(char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlen(const char *str);
+char	*read_file(int fd, char *next, int *bytes_read);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
