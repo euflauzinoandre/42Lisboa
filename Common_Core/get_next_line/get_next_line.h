@@ -6,10 +6,9 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:27:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/09/10 16:05:08 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/09/16 15:41:36 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
@@ -17,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <string.h>
 # include <fcntl.h> 
 
 char	*get_next_line(int fd);
