@@ -6,12 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:46:32 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:43:55 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:40:23 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
-#include <stddef.h>
+#include "../include/libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {

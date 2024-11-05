@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 00:37:42 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:54:36 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:37:57 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 static int	count_numbers(long n)
 {

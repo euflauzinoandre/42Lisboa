@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:48:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:54:48 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:36:13 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {

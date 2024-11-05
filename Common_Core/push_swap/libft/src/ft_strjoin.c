@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:33:48 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:27:04 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:46:05 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 01:28:19 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:27:47 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:48:26 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 int	print_p(void *ptr, int fd)
 {

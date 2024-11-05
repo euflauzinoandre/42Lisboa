@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:07:26 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:26:58 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:45:54 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 char	*ft_strdup(const char *str)
 {

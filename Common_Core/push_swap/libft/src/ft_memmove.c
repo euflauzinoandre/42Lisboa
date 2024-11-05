@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:42:32 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:26:20 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:40:12 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

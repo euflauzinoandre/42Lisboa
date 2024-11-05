@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:12:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:26:33 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:42:05 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 21:25:24 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:26:41 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:43:27 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 static int	to_char(long n, int *count, int fd)
 {

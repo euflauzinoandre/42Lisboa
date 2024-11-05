@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:33:34 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:25:49 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:38:37 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

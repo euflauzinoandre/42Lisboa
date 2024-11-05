@@ -6,11 +6,11 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:59:37 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:27:37 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:48:08 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../include/libft.h"
 
 int	ft_tolower(int c)
 {
