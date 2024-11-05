@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:59:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/10/15 14:44:48 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:26:46 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /*FT_PRINTF*/
-int	ft_printf(const char *arguments, ...);
-int	output_data(const char *str, int num_args, va_list args, int fd);
-int	print_p(void *prt, int fd);
-int	print_di(int n, int fd);
-int	print_u(unsigned int n, int fd);
-int	print_x(unsigned long n, int fd);
-int	print_upperx(unsigned long n, int fd);
+int		ft_printf(const char *str, ...);
+int		output_data(const char *str, int num_args, va_list args, int fd);
+int		print_p(void *prt, int fd);
+int		print_di(int n, int fd);
+int		print_u(unsigned int n, int fd);
+int		print_x(unsigned long n, int fd);
+int		print_upperx(unsigned long n, int fd);
 
 #endif //LIBFT_H
