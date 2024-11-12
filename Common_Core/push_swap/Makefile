@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 18:24:21 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/11/05 16:07:18 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/11/12 12:30:51 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ GREEN = \033[32m
 RED   = \033[31m
 
 # Directory of executable file "push_swap"
-NAME = $(BIN_DIR)/push_swap
+NAME = $(ROOT_DIR)/push_swap
 
 # Make command to compile libft file ('-s' to silence libft messages)
 MAKE = @make -s
@@ -27,11 +27,10 @@ MV = @mv
 RM = @rm -rf
 AR = @ar -rcs
 MKDIR = @mkdir -p
-MESSAGE = @echo
-SLEEP = @sleep 1
+MESSAGE = @echo -e
 
 # Directories
-BIN_DIR = bin
+ROOT_DIR = .
 SRC_DIR = src
 BUILD_DIR = build
 INCLUDE_DIR = include
@@ -51,21 +50,20 @@ CFLAGS = -Wall -Wextra -Werror -I$(INCLUDE_DIR)
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 
 # Rule to generate object files from file list
-##	patsubst: chang .c files list into .o files list 
+##	patsubst: change .c files list into .o files list 
 ###	syntax = patsubst(pattern, replacement, text)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Master
 all: clear_screen $(NAME)
 	$(MESSAGE) ""
-	$(MESSAGE) "$(GREEN)Compiled successfully!$(RESET)"
-	@sleep 0.3
-	$(MESSAGE) "## Use './bin/push_swap' with a sequence of integers. ##"
+	$(MESSAGE) "$(GREEN)## Compiled successfully!$(RESET)"
+	@sleep 0.5
+	$(MESSAGE) "## Call './push_swap' with integers [\" \" is optional]"
 	$(MESSAGE) ""
 
 # Rule compile objects, libraries and generate the final file "push_swap"
 $(NAME): $(OBJS) $(LIB_PATH)
-	$(MKDIR) bin
 	$(CC) $(CFLAGS) $(OBJS) -L$(LIB_DIR) -lpushswap -o $(NAME)
 
 # Rule to build the library and move to "lib" folder
@@ -87,21 +85,18 @@ clear_screen:
 
 # Rule to remove all object files
 clean:
-	$(RM) $(BIN_DIR)
 	$(RM) $(BUILD_DIR)
 	$(MAKE) clean -C $(LIBFT)
-	$(SLEEP)
-	$(MESSAGE) "$(RED)[Deleted object files]$(RESET)"
+	$(MESSAGE) "$(RED)## Deleted object files$(RESET)"
 
-# Rule to call "clean" rule and remove all libraries
+# Rule to call "clean" rule and remove all libraries and the executable file
 fclean: clean
 	$(RM) $(LIB_DIR)
-	$(MAKE) fclean -C $(LIBFT)
-	$(SLEEP)	
-	$(MESSAGE) "$(RED)[Deleted libraries]$(RESET)"
+	$(RM) $(NAME)
+	$(MAKE) fclean -C $(LIBFT)	
+	$(MESSAGE) "$(RED)## Deleted libraries$(RESET)"
 
 # Rule to remove all created files and rebuild the project
 re: clear_screen fclean all
 
 .PHONY: all clean fclean re
-
