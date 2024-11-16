@@ -6,68 +6,54 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 20:20:19 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/12 14:34:19 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/16 19:20:22 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_free(char **str)
+int	*two_argument(char **argv)
 {
-	int	i;
-	
-	i = 0;
-	while (str[i] != NULL)
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-}
-
-int	*create_list(int argc, char **argv)
-{
-	char	**parameters;
+	char	**arguments;
 	int	*numbers;
 	int		i;
-	int		j;
-	int		total_params;
 
-	i = 0;
-	j = 1;
-	total_params = 0;
-	if (argc == 2)
-	{
-		parameters = ft_split(argv[1], ' ');
-		if (!parameters)
-			return (NULL);
-	}
-	if (argc > 2)
-	{
-		parameters = malloc(sizeof(char *) * (argc - 1));
-		if (!parameters)
-			return(NULL);
-		while (j < argc)
-			parameters[total_params++] = argv[j++];
-		parameters[total_params] = NULL;
-	}
-	while (parameters[total_params] != NULL)
-		total_params++;	
-	numbers = malloc((total_params) * sizeof(int));
+	arguments = ft_split(argv[1], ' ');
+	if (!arguments)
+		return (NULL);
+	numbers = malloc(total_size(arguments) * sizeof(int));
 	if (!numbers)
-		return(NULL);
+		return (NULL);
 	i = 0;
-	while (parameters[i] != NULL)
+	while (arguments[i] != NULL)
 	{
-		numbers[i] = ft_atoi(parameters[i]);
+		numbers[i] = ft_atoi(arguments[i]);
 		i++;
 	}
-	if (argc == 2)
-		ft_free(parameters);
-	return(numbers);
+	ft_free(arguments);
+	return (numbers);
 }
 
-// void	ft_check_args(int argc, char **argv)
-// {
-	
-// }
+int	*many_arguments(char **argv)
+{
+	int	*numbers;
+	int	count;
+	int	i;
+	int	j;
+
+	i = 1;
+	count = 0;
+	while (argv[i] != NULL)
+		count += ft_strlen(argv[i++]);
+	numbers = malloc(count * sizeof(int));
+	if (!numbers)
+		return (NULL);
+	i = 1;
+	while (argv[i] != NULL)
+	{
+		numbers[j] = ft_atoi(argv[i]);
+		i++;
+		j++;
+	}
+	return (numbers);
+}

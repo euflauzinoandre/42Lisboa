@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:37:21 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/12 14:07:02 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/16 19:21:54 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@
 // void	rotate(t_stack **stack);
 // void	reverse_rotate(t_stack **stack);
 
-/* Utils */
+/* Tools */
 void	ft_free(char **str);
-int	*create_list(int argc, char **argv);
+int	total_size(char **arr);
+
+/* Utils */
+int	*two_argument(char **argv);
+int	*many_arguments(char **argv);
 
 /* Stack */
 typedef struct s_stack
