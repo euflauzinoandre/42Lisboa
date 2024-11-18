@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:37:15 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/16 19:24:14 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:50:12 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,13 @@
 
 int	main(int argc, char **argv)
 {
-	int	*numbers;
-	int	*temp;
+	t_list	*stack_a;
+	t_list	*stack_b;
 
-	if (argc < 2)
-		return (0);
-	if (argc == 2)
-		numbers = two_argument(argv);
-	else
-		numbers = many_arguments(argv);
-	// ft_printf("ARGC = %d\n", argc);
-	// temp = numbers;
-	// while (*temp)
-	// 	ft_printf("%d\n", *temp++);
-	free(numbers);
+	stack_a = NULL;
+	stack_b = NULL;
+	init_stack(&stack_a, argc, argv);
+	print_stack("stack_a", stack_a);
+	print_stack("stack_b", stack_b);
 	return (0);
 }
