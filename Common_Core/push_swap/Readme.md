@@ -1,18 +1,24 @@
 ## Push_swap Tree:
 
 push_swap/
-├── bin/
-│    └── "Project Exexutable"
 ├── build/
-│    └── "Object files"
+│    	└── "Object files"
 ├── include/
-│    └── push_swap.h
+│    	└── push_swap.h
 ├── lib/
-│    └── libpushswap.a
+│   	└── libpushswap.a
 ├── libft/
-│    └── "LIBFT Library"
+│    	└── "LIBFT Library"
 ├── src/
-│    ├── main.c
-│    └── push_swap.c
+│    	├── init_stack.c
+│	├── push_swap.c
+│	├──
+│	├──
+│	├──
+│	├──
+│	├──
+│	├──
+│    	└──
 ├── Makefile
+├── "Project Exexutable"
 └── Readme.md
