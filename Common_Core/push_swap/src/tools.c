@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:25:25 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/25 15:47:56 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:10:11 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ft_free(char **str)
 {
 	int	i;
-	
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	while (i >= 0)
 		free(str[i--]);
