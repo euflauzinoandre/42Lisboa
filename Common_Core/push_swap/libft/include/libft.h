@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:59:00 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/18 14:32:11 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:08:12 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int		ft_putnbr_unsigned_fd(unsigned int n, int fd);
 /*BONUS PART*/
 typedef struct s_list
 {
-	int			content;
+	int				content;
 	struct s_list	*next;
 }	t_list;
 
