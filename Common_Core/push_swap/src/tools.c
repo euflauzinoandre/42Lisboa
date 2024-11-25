@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:25:25 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/18 11:31:14 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/25 15:47:56 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,28 @@
 
 void	ft_free(char **str)
 {
-	int i;
-
+	int	i;
+	
 	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != NULL)
-	{
-		free(str[i]);
+	while(str[i])
 		i++;
-	}
-	free(str);
+	while (i >= 0)
+		free(str[i--]);
 }
 
-int	count_numbers(int *numbers)
+void	free_stack(t_list **stack)
 {
-	int	i;
+	t_list	*head;
+	t_list	*tmp;
 
-	i = 0;
-	while (numbers[i])
-		i++;
-	return (i);
+	head = *stack;
+	if (!stack || !*stack)
+		return ;
+	while (head)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
+	*stack = NULL;
 }
