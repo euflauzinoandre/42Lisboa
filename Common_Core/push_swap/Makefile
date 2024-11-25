@@ -6,7 +6,7 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 18:24:21 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/11/12 22:20:08 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/11/25 16:24:16 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ MV = @mv
 RM = @rm -rf
 AR = @ar -rcs
 MKDIR = @mkdir -p
-MESSAGE = @echo
+MESSAGE = @echo -e
 
 # Directories
 ROOT_DIR = .
@@ -50,7 +50,7 @@ CFLAGS = -Wall -Wextra -Werror -I$(INCLUDE_DIR)
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 
 # Rule to generate object files from file list
-##	patsubst: change .c files list into .o files list
+##	patsubst: change .c files list into .o files list 
 ###	syntax = patsubst(pattern, replacement, text)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 
@@ -93,7 +93,7 @@ clean:
 fclean: clean
 	$(RM) $(LIB_DIR)
 	$(RM) $(NAME)
-	$(MAKE) fclean -C $(LIBFT)
+	$(MAKE) fclean -C $(LIBFT)	
 	$(MESSAGE) "$(RED)## Deleted libraries$(RESET)"
 
 # Rule to remove all created files and rebuild the project
