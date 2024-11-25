@@ -16,7 +16,7 @@ void	init_stack(t_list **stack, int argc, char **argv)
 {
 	t_list	*new;
 	char	**args;
-	int     	i;
+	int		i;
 
 	i = 0;
 	if (argc == 2)
