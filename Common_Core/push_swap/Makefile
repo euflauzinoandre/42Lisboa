@@ -27,7 +27,7 @@ MV = @mv
 RM = @rm -rf
 AR = @ar -rcs
 MKDIR = @mkdir -p
-MESSAGE = @echo -e
+MESSAGE = @echo
 
 # Directories
 ROOT_DIR = .
