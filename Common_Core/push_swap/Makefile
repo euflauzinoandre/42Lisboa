@@ -6,14 +6,9 @@
 #    By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 18:24:21 by aeuflauz          #+#    #+#              #
-#    Updated: 2024/11/25 16:24:16 by aeuflauz         ###   ########.fr        #
+#    Updated: 2024/11/25 18:20:30 by aeuflauz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# Text colors
-RESET = \033[0m
-GREEN = \033[32m
-RED   = \033[31m
 
 # Directory of executable file "push_swap"
 NAME = $(ROOT_DIR)/push_swap
@@ -57,7 +52,7 @@ OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 # Master
 all: clear_screen $(NAME)
 	$(MESSAGE) ""
-	$(MESSAGE) "$(GREEN)## Compiled successfully!$(RESET)"
+	$(MESSAGE) "## Compiled successfully!"
 	@sleep 0.5
 	$(MESSAGE) "## Call './push_swap' with integers [\" \" is optional]"
 	$(MESSAGE) ""
@@ -87,14 +82,14 @@ clear_screen:
 clean:
 	$(RM) $(BUILD_DIR)
 	$(MAKE) clean -C $(LIBFT)
-	$(MESSAGE) "$(RED)## Deleted object files$(RESET)"
+	$(MESSAGE) "## Deleted object files"
 
 # Rule to call "clean" rule and remove all libraries and the executable file
 fclean: clean
 	$(RM) $(LIB_DIR)
 	$(RM) $(NAME)
 	$(MAKE) fclean -C $(LIBFT)	
-	$(MESSAGE) "$(RED)## Deleted libraries$(RESET)"
+	$(MESSAGE) "## Deleted libraries"
 
 # Rule to remove all created files and rebuild the project
 re: clear_screen fclean all
