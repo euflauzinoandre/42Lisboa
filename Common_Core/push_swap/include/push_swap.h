@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:37:21 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/26 13:54:20 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:51:47 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ int		rrr(t_list **stack_a, t_list **stack_b);
 void	ft_free(char **str);
 void	free_stack(t_list **stack);
 int		count_digits(int n);
-int	        is_sorted(t_list **stack);
+int		is_sorted(t_list **stack);
 
 /* Sort */
-int             get_max(t_list **stack);
-int     	byPosition(int num, int digits, int position);
+int		get_max(t_list **stack);
+int		byPosition(int num, int digits, int position);
 void	callback(t_list **stack_a, t_list **stack_b);
 void	radix_sort(t_list **stack_a, t_list **stack_b);
 
