@@ -24,7 +24,7 @@ void	init_stack(t_list **stack, int argc, char **argv)
 	else
 	{
 		i = 1;
-		args = argv;
+		args = argv + 1;
 	}
 	while (args[i])
 	{
@@ -36,17 +36,20 @@ void	init_stack(t_list **stack, int argc, char **argv)
 		ft_free(args);
 }
 
-void	print_stack(char *str, t_list *stack)
+void	print_stack(t_list **stack)
 {
-	if (stack == NULL)
+	t_list	*head;
+
+	head = *stack;
+	if (head == NULL)
 	{
-		ft_printf("\nVazio!\n");
+		ft_printf("\nEmpty!\n");
 		return ;
 	}
-	ft_printf("%s:\n", str);
-	while (stack)
+	while (head->next)
 	{
-		ft_printf("%d\n", stack->content);
-		stack = stack->next;
+		ft_printf("%d ", head->content);
+		head = head->next;
 	}
+	ft_printf("\n");
 }
