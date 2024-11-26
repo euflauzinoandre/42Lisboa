@@ -6,7 +6,7 @@
 /*   By: aeuflauz <aeuflauz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:25:25 by aeuflauz          #+#    #+#             */
-/*   Updated: 2024/11/26 16:43:05 by aeuflauz         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:49:05 by aeuflauz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	free_stack(t_list **stack)
 int	count_digits(int num)
 {
 	int	count;
-	
+
 	if (num == 0)
 		return (1);
 	while (num > 0)
